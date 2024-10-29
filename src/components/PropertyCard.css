@@ -1,0 +1,74 @@
+.property-card {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-card:hover {
+  cursor: pointer;
+  box-shadow: var(--shadow-4);
+  transition: 0.5s ease;
+}
+
+.property-card:where(:hover, :focus-within) .property-image {
+  scale: 1.03;
+  rotate: 0.2deg;
+  transition: 0.5s ease;
+}
+
+.property-image {
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.property-details {
+  padding-block: 1.25rem;
+  padding-inline: clamp(1.5rem, 2vw, 3rem);
+  background-color: #f9fafb;
+}
+
+.property-title {
+  font-size: clamp(1.15em, 1.6vw, 1.5em);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.property-price {
+  font-size: clamp(1em, 1.1vw, 1.3em);
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.property-address {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: clamp(0.9em, 1vw, 1.2em);
+}
+
+.property-icons {
+  display: flex;
+  margin-top: 0.5rem;
+  padding-block-start: 1rem;
+  border-block-start: 2px solid var(--neutral-90);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.icon-group svg {
+  margin-right: 0.25rem;
+}
+
+.property-card-link {
+  text-decoration: none;
+}

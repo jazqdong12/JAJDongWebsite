@@ -1,0 +1,91 @@
+:root {
+  /**
+    * COLORS
+    */
+  --white: #ffffff;
+  --yellow: #f6bd26;
+  --primary-100: #2179ff;
+  --primary-90: #1e6de5;
+  --primary-80: #1b61cc;
+  --primary-70: #1755b2;
+  --primary-40: #0d3166;
+  --primary-20: #071833;
+  --secondary-100: #21ffff;
+  --secondary-20: #073333;
+  --neutral-100: #fafcff;
+  --neutral-98: #f2f5fa;
+  --neutral-95: #e9ecf2;
+  --neutral-90: #dadfe5;
+  --neutral-80: #c2c6cc;
+  --neutral-60: #919499;
+  --neutral-50: #797c80;
+  --neutral-40: #616366;
+  --neutral-30: #494a4d;
+  --neutral-20: #303133;
+  --neutral-10: #18191a;
+
+  --font-primary: "Montserrat", sans-serif;
+
+  --shadow-1: 0px 2px 4px 0px #00000033;
+  --shadow-2: 0px 5px 10px 0px #0000000d;
+  --shadow-3: 0px 5px 10px 0px #00000033;
+  --shadow-4: 0px 10px 20px 0px #0000001a;
+
+  --transition-easing-quick: cubic-bezier(0, 0.7, 0.3, 1);
+  --transition-duration-quick: 200ms;
+  --transition-duration-smooth: 500ms;
+}
+
+html {
+  font-family: var(--font-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 5rem;
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  overscroll-behavior: none;
+  height: 100%;
+  overflow-y: scroll;
+  font-family: var(--font-primary);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
