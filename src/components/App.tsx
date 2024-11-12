@@ -17,8 +17,8 @@ function App() {
   return (
     <HashRouter>
       <div style={{ fontFamily: "var(--font-primary)" }}>
-        <NavBar />
         <div className="main-content">
+          <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />

@@ -1,16 +1,20 @@
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import PropertyCard from "./PropertyCard";
 
 interface PropertyGroupProps {
-  cardArray: (typeof PropertyCard)[];
+  cardArray: JSX.Element[];
   rowLength: number;
+  minLength: number;
 }
 
-const PropertyGroup = ({ cardArray, rowLength }: PropertyGroupProps) => {
+const PropertyGroup = ({
+  cardArray,
+  rowLength,
+  minLength,
+}: PropertyGroupProps) => {
   return (
-    <Row xs={2} md={rowLength} className="g-4">
-      {cardArray.map((card: PropertyCard, idx: number) => (
+    <Row xs={minLength} md={rowLength} className="g-4">
+      {cardArray.map((card, idx) => (
         <Col key={idx}> {card} </Col>
       ))}
     </Row>

@@ -7,7 +7,7 @@
 
 .navbar .navbar-nav {
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .navbar * {
@@ -16,7 +16,6 @@
 
 .navbar .navbar-nav .nav-link:hover {
   transition: 0.3s ease;
-  font-size: 1.05em;
   font-weight: bold;
   color: white;
 }
@@ -39,7 +38,6 @@
 .custom-dropdown .dropdown-item:hover {
   background-color: var(--primary-20);
   transition: 0.3s ease;
-  font-size: 1em;
   font-weight: bold;
 }
 

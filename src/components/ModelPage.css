@@ -1,0 +1,10 @@
+.slides-container {
+  width: 60vw;
+  position: relative;
+}
+
+.map-container {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+}

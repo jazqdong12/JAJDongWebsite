@@ -2,9 +2,9 @@ import "./Home.css";
 import HeroSlider from "../components/HeroSlider";
 import MyButton from "../components/MyButton";
 import PropertyCard from "../components/PropertyCard";
-import sablePalm from "../assets/properties/sablepalm.jpg";
-import bambooPalm from "../assets/properties/bamboopalm.jpg";
-import the1350 from "../assets/properties/1350.jpg";
+import sablePalm from "../assets/properties/SablePalm/sablepalm.jpg";
+import bambooPalm from "../assets/properties/BambooPalm/bamboopalm.jpg";
+import the1350 from "../assets/properties/1350/1350.jpg";
 import PropertyGroup from "../components/PropertyGroup";
 
 const featuredArray = [
@@ -52,7 +52,11 @@ const Home = () => {
         </div>
       </section>
       <section className="property-section">
-        <PropertyGroup cardArray={featuredArray} rowLength={3}></PropertyGroup>
+        <PropertyGroup
+          cardArray={featuredArray}
+          rowLength={3}
+          minLength={2}
+        ></PropertyGroup>
       </section>
     </>
   );
