@@ -1,0 +1,35 @@
+.about {
+  padding-block-start: 3rem;
+  padding-block-end: 6rem;
+  padding-inline: 18rem;
+}
+
+.about h2 {
+  font-size: 24px;
+  font-weight: bolder;
+  padding-block: 1rem;
+}
+
+.link {
+  color: var(--primary-40);
+  font-weight: bolder;
+}
+
+.link:hover {
+  color: var(--primary-100);
+}
+
+@media (max-width: 992px) {
+  .about {
+    padding-block-end: 4rem;
+    padding-block-start: 3rem;
+    padding-inline: 2rem;
+  }
+  .about h2 {
+    font-size: 22px;
+  }
+
+  .about h3 {
+    font-size: 16px;
+  }
+}

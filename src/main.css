@@ -39,6 +39,7 @@
 html {
   font-family: var(--font-primary);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -49,9 +50,9 @@ body {
   min-height: 100vh;
   overscroll-behavior: none;
   height: 100%;
-  overflow-y: scroll;
   font-family: var(--font-primary);
   background-color: var(--neutral-98);
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -64,19 +65,12 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--neutral-60);
-  border-radius: 3px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-h2 {
-  padding-top: 1.8rem;
-  font-size: 1.8em;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 1.05em;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

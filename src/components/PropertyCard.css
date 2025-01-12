@@ -2,62 +2,63 @@
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
 }
 
 .property-card:hover {
   cursor: pointer;
   box-shadow: var(--shadow-4);
   transition: 0.5s ease;
+  opacity: 100%;
 }
 
 .property-card:where(:hover, :focus-within) .property-image {
-  scale: 1.03;
-  rotate: 0.2deg;
-  transition: 0.5s ease;
+  scale: 1.02;
+  rotate: 0.5deg;
+  transition: 0.7s ease;
 }
 
 .property-image {
   object-fit: cover;
-  height: clamp(150px, 250px, 450px);
+  height: clamp(20vh, 30vh, 40vh);
 }
 
 .property-details {
-  padding-block: 1.25rem;
-  padding-inline: clamp(1.5rem, 2vw, 3rem);
+  padding-block-start: 1.2rem;
+  padding-block-end: 1rem;
+  padding-inline: clamp(1.4rem, 2vw, 3rem);
   background-color: #f9fafb;
 }
 
 .property-title {
-  font-size: clamp(1.15em, 1.6vw, 1em);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-size: clamp(1.1em, 1.4vw, 1.3em);
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+  color: var(--primary-20);
 }
 
 .property-price {
-  font-size: clamp(1em, 1.1vw, 1.3em);
+  font-size: clamp(0.85em, 1vw, 1em);
   color: #333;
   font-weight: 550;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .property-address {
   color: #666;
   margin-bottom: 1rem;
-  font-size: clamp(0.9em, 1vw, 1.2em);
+  font-size: clamp(0.8em, 0.9em, 1em);
 }
 
 .property-icons {
   display: flex;
-  margin-top: 0.5rem;
-  padding-block-start: 1rem;
+  padding-block: 0.3rem;
   border-block-start: 2px solid var(--neutral-90);
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
 }
 
 .icon-group {
@@ -65,6 +66,8 @@
   align-items: center;
   font-size: 0.9rem;
   color: #555;
+  gap: 2px;
+  padding-inline: 0.2rem;
 }
 
 .icon-group svg {
@@ -73,4 +76,28 @@
 
 .property-card-link {
   text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  .icon-group {
+    font-size: 0.8rem;
+  }
+  .property-address {
+    color: #666;
+    margin-block: 0.5rem;
+    font-size: 0.8em;
+  }
+
+  .property-details {
+    padding-block-start: 1rem;
+  }
+
+  .property-card:hover {
+    transform: scale(1);
+  }
+
+  .property-card:where(:hover, :focus-within) .property-image {
+    scale: 1;
+    rotate: 0deg;
+  }
 }

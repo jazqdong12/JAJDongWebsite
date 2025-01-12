@@ -13,7 +13,7 @@ function Slideshow({ images, clamp, opacity }: SlideshowProps) {
         <Carousel.Item key={index}>
           <img
             src={src}
-            className="d-block w-100"
+            className=" w-100"
             style={{ height: `clamp(${clamp})`, objectFit: "cover" }}
           />
         </Carousel.Item>

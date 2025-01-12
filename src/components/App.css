@@ -1,3 +1,4 @@
 .main-content {
   background-color: var(--neutral-98);
+  overscroll-behavior: none;
 }

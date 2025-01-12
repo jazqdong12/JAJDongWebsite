@@ -1,12 +1,21 @@
 .contact-section {
   display: flex;
-  padding-block: 4rem;
+  padding-block: 6rem;
+  padding-inline: 10rem;
   background-color: var(--neutral-98);
-  min-height: 100vh;
-  width: 100vw;
+  width: calc(var(--vw, 1vw) * 100);
+  gap: 4rem;
+}
+
+.contact-border {
+  display: block;
+  width: 4px;
+  background-color: var(--neutral-95);
+  margin: 0 1rem;
 }
 
 .contact-content {
+  flex: 1;
   display: flex;
   gap: 6rem;
 }
@@ -17,24 +26,25 @@
 }
 
 .contact-info h2 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 600;
 }
 
 .contact-info p {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .icon {
-  margin-right: 0.5rem;
+  margin-right: 0.1rem;
 }
 
 .icon-home {
-  margin-right: 0.5rem;
-  font-size: 1.4rem;
+  margin-right: 0.1rem;
+  font-size: 1.3rem;
 }
 
 .contact-form {
@@ -45,20 +55,32 @@
 .contact-info h1,
 .contact-form h1 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: var(--primary-20);
   font-size: 1.6em;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section h1:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-40), var(--neutral-80));
+  margin: 1rem auto;
+  border-radius: 2px;
 }
 
 .form-group {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .input-field {
   width: 100%;
   padding: 0.5rem;
-  border-radius: 10px;
+  background-color: var(--neutral-100);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.075);
 }
 
 .contact-form button {
@@ -71,20 +93,54 @@
 @media (max-width: 760px) {
   .contact-section {
     display: block;
+    padding-inline: 0rem;
+    padding-block: 4rem;
+  }
+
+  .contact-border {
+    display: none;
   }
 
   .contact-content {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    padding-inline: 3rem;
+    padding-inline: 2.5rem;
   }
 
   .contact-info h1,
   .contact-form h1 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: var(--primary-20);
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: bold;
+  }
+
+  .contact-section .label-medium {
+    font-size: 14px;
+  }
+  .contact-info h2 {
+    font-size: 16px;
+  }
+
+  .contact-section p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .icon {
+    font-size: 0.8rem;
+    line-height: 22px;
+    display: block;
+    width: 1em;
+    height: 1rem;
+  }
+
+  .icon-home {
+    font-size: 1.1rem;
+    line-height: 22px;
+    display: block;
+    width: 1em;
+    height: 1rem;
   }
 }

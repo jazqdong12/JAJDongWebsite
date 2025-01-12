@@ -1,14 +1,13 @@
 import { useEffect } from "react";
 import emailjs from "emailjs-com";
-
 import Form from "react-bootstrap/Form";
 import MyButton from "../components/MyButton";
 import { FaHome, FaClock, FaEnvelope, FaPhone } from "react-icons/fa";
 import "./Contact.css";
 
-const emailPublicKey = import.meta.env.REACT_APP_EMAIL_PUBLIC_KEY;
-const emailServiceKey = import.meta.env.REACT_APP_EMAIL_SERVICE_KEY;
-const emailTemplateKey = import.meta.env.REACT_APP_TEMPLATE_KEY;
+const emailPublicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
+const emailServiceKey = import.meta.env.VITE_EMAIL_SERVICE_KEY;
+const emailTemplateKey = import.meta.env.VITE_TEMPLATE_KEY;
 
 function Contact() {
   useEffect(() => {
@@ -27,13 +26,13 @@ function Contact() {
         alert("Message sent successfully!");
         (event.target as HTMLFormElement).reset();
       })
-      .catch((error) => {
-        alert("An error occurred, please try again.");
+      .catch((error: string) => {
+        alert({ error });
       });
   };
   return (
     <section className="contact-section">
-      <div className="container contact-content">
+      <div className="contact-content">
         <div className="contact-info">
           <h1>Contact Us</h1>
           <h2>Office</h2>
@@ -56,7 +55,7 @@ function Contact() {
             239 - 770 - 7720
           </p>
         </div>
-
+        <div className="contact-border"></div>
         <div className="contact-form">
           <h1>Send A Message</h1>
           <Form id="contact-form" onSubmit={sendEmail}>

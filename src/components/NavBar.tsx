@@ -11,10 +11,15 @@ import "./NavBar.css";
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);
+
+  const handleNavClick = () => {
+    setExpanded(false); // Close the Navbar
+  };
+
   return (
-    <Navbar expand="md" fixed="top" data-bs-theme="dark">
+    <Navbar expand="md" fixed="top" data-bs-theme="dark" expanded={expanded}>
       <Container>
-        <Navbar.Brand className="me-auto" href="/">
+        <Navbar.Brand className="ms-0" href="/">
           <img src={logo} style={{ height: "70px" }} />
         </Navbar.Brand>
         <Navbar.Toggle
@@ -25,36 +30,72 @@ function NavBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to="/" onClick={handleNavClick}>
               Home
             </Nav.Link>
             <NavDropdown
               title="Models"
               id="basic-nav-dropdown"
               className="custom-dropdown"
+              onMouseEnter={(e) => {
+                const dropdown = e.currentTarget;
+                const menu = dropdown.querySelector(".dropdown-menu");
+                if (menu) {
+                  dropdown.classList.add("show");
+                  menu.classList.add("show");
+                }
+              }}
+              onMouseLeave={(e) => {
+                const dropdown = e.currentTarget;
+                const menu = dropdown.querySelector(".dropdown-menu");
+                if (menu) {
+                  dropdown.classList.remove("show");
+                  menu.classList.remove("show");
+                }
+              }}
             >
-              <NavDropdown.Item as={Link} to="/models">
-                All Models
+              <NavDropdown.Item as={Link} to="/models" onClick={handleNavClick}>
+                View All
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/models/sable-palm">
+              <NavDropdown.Item
+                as={Link}
+                to="/models/sable-palm"
+                onClick={handleNavClick}
+              >
                 Sable Palm
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/models/sable-palm-plus">
+              <NavDropdown.Item
+                as={Link}
+                to="/models/sable-palm-plus"
+                onClick={handleNavClick}
+              >
                 Sable Palm Plus
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/models/bamboo-palm">
+              <NavDropdown.Item
+                as={Link}
+                to="/models/bamboo-palm"
+                onClick={handleNavClick}
+              >
                 Bamboo Palm
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/models/the-1350">
+              <NavDropdown.Item
+                as={Link}
+                to="/models/the-1350"
+                onClick={handleNavClick}
+              >
                 The 1350
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/models/the-duplex">
+              <NavDropdown.Item
+                as={Link}
+                to="/models/the-duplex"
+                onClick={handleNavClick}
+              >
                 The Duplex
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/contact">
-              Contact Us
+            <Nav.Link as={Link} to="/contact" onClick={handleNavClick}>
+              Contact
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

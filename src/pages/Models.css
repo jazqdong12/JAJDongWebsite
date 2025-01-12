@@ -1,3 +1,12 @@
+.models {
+  background: linear-gradient(
+    to right,
+    var(--neutral-95),
+    var(--neutral-100),
+    var(--neutral-100),
+    var(--neutral-95)
+  );
+}
 .heading-section {
   margin-inline: 3rem;
   text-align: center;
@@ -7,6 +16,18 @@
   padding-top: 1.8rem;
   font-size: 1.8em;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: var(--primary-20);
+}
+
+.heading-section h1:after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-40), var(--neutral-80));
+  margin: 0.5rem auto;
+  border-radius: 2px;
 }
 
 .heading-section h3 {
@@ -15,12 +36,13 @@
 
 .models-section {
   padding-inline: 5rem;
-  padding-block: 1.5rem;
+  padding-block-start: 1.5rem;
+  padding-block-end: 4rem;
 }
 
 @media (max-width: 760px) {
   .heading-section {
-    margin-left: 3rem;
+    margin-left: 2rem;
     text-align: left;
   }
 
@@ -28,7 +50,19 @@
     font-size: 1.5em;
   }
 
+  .heading-section h1:after {
+    width: 300px;
+    margin: 0rem;
+    margin-block: 0.5rem;
+  }
+
+  .heading-section h3 {
+    font-size: 0.9em;
+    /* font-weight: bold; */
+  }
+
   .models-section {
-    padding-inline: 3rem;
+    padding-inline: 1.5rem;
+    padding-block-start: 1rem;
   }
 }

@@ -1,0 +1,43 @@
+.privacy {
+  padding-block-end: 6rem;
+  padding-block-start: 1rem;
+  padding-inline: 14rem;
+}
+
+.privacy h2 {
+  font-size: 32px;
+  font-weight: bolder;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+.privacy h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  padding-top: 1rem;
+}
+
+.link {
+  color: var(--primary-100);
+  font-weight: bolder;
+}
+
+.link:hover {
+  color: var(--primary-20);
+}
+
+@media (max-width: 992px) {
+  .privacy {
+    padding-block-start: 1rem;
+    padding-block-end: 4rem;
+    padding-inline: 2rem;
+  }
+  .privacy h2 {
+    font-size: 22px;
+    padding-top: 3rem;
+  }
+
+  .privacy h3 {
+    font-size: 16px;
+  }
+}

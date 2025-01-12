@@ -1,0 +1,18 @@
+.widget-container {
+  position: fixed;
+  min-width: 90px;
+  top: 80px;
+  right: 0px;
+  z-index: 100;
+  padding: 1px;
+}
+
+.gtranslate-widget-container * {
+  display: revert;
+  color: black;
+}
+
+.gtranslate-widget-container img {
+  width: 15px;
+  height: 15px;
+}
